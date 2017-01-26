@@ -1,0 +1,29 @@
+﻿@model WebApplication1.IdentityStuff.MyIdentityUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @*@Model*@
+    <div>
+        Welcome  <b>@ViewBag.FullName</b>
+    </div>
+
+    @Html.ActionLink("Logout","LogOut")
+    @Html.ActionLink("Change Profile", "ChangeProfile","Account")
+
+
+    @Html.ActionLink("Change Password", "ChangePassword", "Account")
+
+    @*<a class="btn btn-default" href="@(Model.CanDelete ? Url.Action("Delete", new { id = Model.FullName }) : "#")" @(Model.CanDelete ? "" : "disabled")>Delete&hellip;</a>*@
+
+
+</body>
+</html>
